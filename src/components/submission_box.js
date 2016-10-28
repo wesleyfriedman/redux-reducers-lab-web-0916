@@ -29,7 +29,7 @@ class SubmissionBox extends Component {
               value={this.state.ingredient}
               onChange={this.handleChange.bind(this)} />
         <div>
-          <button action="submit">Submit Ingredient</button>
+          <button action="submit">Add Ingredient</button>
         </div>
       </form>
     )

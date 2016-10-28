@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Practice writing out reducers",
   "engines": {
-    "node": "6.x",
+    "node": "6.91",
     "npm": "3.x"
   },
   "main": "src/index.js",
@@ -41,6 +41,7 @@
     "mocha": "^3.0.1",
     "mocha-multi": "^0.9.1",
     "node-inspector": "^0.12.8",
+    "react-addons-test-utils": "^15.3.2",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.16.2"
   },

@@ -1,14 +1,15 @@
-global.expect = require('expect');
+import expect from 'expect';
+import jsdom from 'jsdom';
+import path from 'path';
+import { transformFileSync } from 'babel-core';
 
-const jsdom = require('jsdom');
-const path = require('path');
 
 before(function(done) {
   const src = path.resolve(__dirname, '..', './src/index.js');
-  const babelResult = require('babel-core').transformFileSync(src, {
+  const babelResult = transformFileSync(src, {
     presets: ['es2015']
   });
-  const html = path.resolve(__dirname, '..', 'index.html');
+  const html = path.resolve(__dirname, '..', '/index.html');
 
   jsdom.env(html, [], {
     src: babelResult.code,
@@ -20,4 +21,4 @@ before(function(done) {
 
     return done();
   });
-}); 
+});
