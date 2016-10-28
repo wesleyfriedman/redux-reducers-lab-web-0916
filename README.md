@@ -2,7 +2,7 @@
 
 ## Objectives
 
-1. Objective 1
+1. Practice writing pure reducers
 2. Objective 2
 
 ## Instructions
