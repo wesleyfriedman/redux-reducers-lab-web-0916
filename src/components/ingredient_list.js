@@ -1,25 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 
-class IngredientList extends Component {
-  constructor(props) {
-    super(props);
+const IngredientList = (props) => {
+  const ingredients = props.ingredients.map((ingredient, idx) =>
+    <li key={idx}>{ingredient}</li>)
+  return (
+    <div>
+      <ul>
+        {ingredients}
+      </ul>
+    </div>
 
-  }
+  )
 
-  render() {
-    return (
-      <div>
-      
-      </div>
-    )
-  }
 }
 
+
 function mapStateToPros(state) {
-  return {
-    ingredients: state.ingredients
-  }
+  return { ingredients: state }
 }
 
 export default connect(mapStateToPros)(IngredientList)

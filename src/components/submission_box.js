@@ -10,7 +10,6 @@ class SubmissionBox extends Component {
 
   }
 
-
   handleChange(event) {
     this.setState({ingredient: event.target.value})
   }
