@@ -23,4 +23,4 @@ In terms of functionality, a user should be able to add an ingredient and remove
 
 ## Resources
 
-- [Redux](http://redux.js.org/docs/basics/Reducers.html)
+- [Redux Reducers](http://redux.js.org/docs/basics/Reducers.html)
