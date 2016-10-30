@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {connect } from 'react-redux';
-import * as actions from '../actions';
+import { addIngredient }  from '../actions';
+import { bindActionCreators } from 'redux';
 
 class SubmissionBox extends Component {
   constructor(props) {
@@ -22,17 +23,22 @@ class SubmissionBox extends Component {
 
   render() {
     return (
-          <form onSubmit={this.handleSubmit.bind(this)}>
+          <form className='form-horizontal' onSubmit={this.handleSubmit.bind(this)}>
           <h4>Add an Ingredient</h4>
             <input
+              className='form-group text'
               value={this.state.ingredient}
               onChange={this.handleChange.bind(this)} />
         <div>
-          <button action="submit">Add Ingredient</button>
+          <button className='btn btn-default btn-success' action="submit">Add Ingredient</button>
         </div>
       </form>
     )
   }
 }
 
-export default connect(null, actions)(SubmissionBox);
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ addIngredient }, dispatch)
+}
+
+export default connect(null, mapDispatchToProps)(SubmissionBox);

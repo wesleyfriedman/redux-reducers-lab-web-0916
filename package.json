@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Practice writing out reducers",
   "engines": {
-    "node": "6.91",
+    "node": "6.9.1",
     "npm": "3.x"
   },
   "main": "src/index.js",
